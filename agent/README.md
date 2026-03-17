@@ -167,6 +167,8 @@ Interpretation guideline:
 
 Detailed case-level comparison is maintained in `benchmarks/comparison.md`.
 
+Methodology note: custom-agent latency is measured from local benchmark execution with mocked exchange responses, while baseline latency reflects chat-driven responses under plan constraints. Treat the benchmark as a relative workflow comparison.
+
 ## 7. Design decisions
 
 Python was selected for fast iteration, broad exchange tooling, and straightforward test/automation ergonomics. `python-binance` provides mature REST bindings and reduces integration risk versus handwritten HTTP clients. Claude is used for NLU only where deterministic regex routing is insufficient, which keeps normal execution fast while still handling ambiguous language. The modular router pattern isolates parsing, orchestration, exchange access, and prompt logic so each layer can evolve independently and be benchmarked in isolation.

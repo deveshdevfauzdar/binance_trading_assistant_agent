@@ -47,3 +47,4 @@
 ### Notes
 - If a result is missing, the table keeps `TBD` placeholders until that benchmark run is provided.
 - Winner is computed from (intent_accuracy + output_correctness) as a simple placeholder heuristic.
+- Baseline values reflect plain Cursor behavior under plan constraints; latency is not a strict apples-to-apples runtime benchmark against local deterministic execution.

@@ -29,3 +29,6 @@ This repository contains a Cursor-ready AI-native Binance trading assistant subm
 
 ## Note on Baseline
 The baseline column reflects a plain Cursor baseline run available under plan constraints and is documented transparently in benchmark artifacts.
+
+## Methodology Note
+The custom benchmark path uses deterministic local execution and mocked exchange responses for repeatability, while the baseline reflects chat-driven behavior under plan constraints. Scores are therefore useful for relative workflow comparison, not as a universal latency or live-trading claim.
