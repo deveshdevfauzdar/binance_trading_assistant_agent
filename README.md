@@ -1,6 +1,6 @@
 # Binance Trading Assistant Agent (Submission)
 
-This repository contains a Cursor-ready AI-native Binance trading assistant submission for the ADE/APO quest.
+This repository contains a Cursor-ready AI-native Binance trading assistant submission for the quest.
 
 ## Quick Navigation
 - Full project README: [agent/README.md](agent/README.md)
