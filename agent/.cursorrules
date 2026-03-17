@@ -1,0 +1,20 @@
+You are working on a Binance trading assistant Python project.
+
+Core security rule:
+- Never hardcode secrets, API keys, or credentials.
+- Always load secrets from environment variables (via .env and python-dotenv).
+
+Architecture and structure rules:
+- Preserve the existing modular structure and separation of concerns.
+- Keep command parsing in router.py, orchestration in agent.py, API access in binance_client.py, and startup wiring in main.py.
+- When adding a new user command, register and parse it in router.py first, then connect execution logic in agent.py.
+
+Code quality rules:
+- Prefer async functions for IO-bound operations (network, disk, API calls) where practical and safe.
+- Wrap external API calls in try/except and log errors clearly with actionable context.
+- Keep each function under 30 lines; extract helper functions when logic grows.
+- Add type hints to all function signatures, including return types.
+
+Change discipline:
+- Make minimal, focused edits that do not break existing behavior.
+- Keep outputs structured and machine-readable where applicable.

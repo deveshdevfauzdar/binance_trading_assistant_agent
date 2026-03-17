@@ -1,0 +1,213 @@
+﻿{
+    "summary":  {
+                    "cases":  20,
+                    "avg_intent_accuracy":  98.5,
+                    "avg_output_correctness":  47.75,
+                    "avg_latency_ms":  2055,
+                    "error_handling_rate":  100,
+                    "speed_score":  0,
+                    "composite_score_1_to_10000":  6850
+                },
+    "cases":  [
+                  {
+                      "case_id":  1,
+                      "difficulty":  "easy",
+                      "command":  "show BTC price",
+                      "intent_accuracy":  100,
+                      "latency_ms":  2600,
+                      "error_handling_pass":  true,
+                      "output_correctness":  30,
+                      "notes":  "Correct intent; web quote text (BTC/USD) not structured BTCUSDT JSON."
+                  },
+                  {
+                      "case_id":  2,
+                      "difficulty":  "easy",
+                      "command":  "show ETH price",
+                      "intent_accuracy":  100,
+                      "latency_ms":  2400,
+                      "error_handling_pass":  true,
+                      "output_correctness":  30,
+                      "notes":  "Correct intent; web quote text (ETH/USD) not structured JSON."
+                  },
+                  {
+                      "case_id":  3,
+                      "difficulty":  "easy",
+                      "command":  "show SOL price",
+                      "intent_accuracy":  100,
+                      "latency_ms":  2200,
+                      "error_handling_pass":  true,
+                      "output_correctness":  30,
+                      "notes":  "Correct intent; web quote text (SOL/USD) not structured JSON."
+                  },
+                  {
+                      "case_id":  4,
+                      "difficulty":  "easy",
+                      "command":  "get my open orders",
+                      "intent_accuracy":  70,
+                      "latency_ms":  3500,
+                      "error_handling_pass":  true,
+                      "output_correctness":  10,
+                      "notes":  "Intent understood but no open-orders payload returned."
+                  },
+                  {
+                      "case_id":  5,
+                      "difficulty":  "easy",
+                      "command":  "get my open orders for BTCUSDT",
+                      "intent_accuracy":  100,
+                      "latency_ms":  3200,
+                      "error_handling_pass":  true,
+                      "output_correctness":  10,
+                      "notes":  "Correct intent; missing authenticated orders payload."
+                  },
+                  {
+                      "case_id":  6,
+                      "difficulty":  "easy",
+                      "command":  "place limit buy order for ETH at 3200 quantity 0.1",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1400,
+                      "error_handling_pass":  true,
+                      "output_correctness":  100,
+                      "notes":  "Correct dry-run ETH limit-buy JSON payload."
+                  },
+                  {
+                      "case_id":  7,
+                      "difficulty":  "easy",
+                      "command":  "place limit buy order for BTCUSDT at 61000 qty 0.002",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1300,
+                      "error_handling_pass":  true,
+                      "output_correctness":  100,
+                      "notes":  "Correct dry-run BTC limit-buy JSON payload."
+                  },
+                  {
+                      "case_id":  8,
+                      "difficulty":  "medium",
+                      "command":  "please show me the current price of bnb",
+                      "intent_accuracy":  100,
+                      "latency_ms":  2100,
+                      "error_handling_pass":  true,
+                      "output_correctness":  30,
+                      "notes":  "Correct intent; natural-language quote, not structured schema."
+                  },
+                  {
+                      "case_id":  9,
+                      "difficulty":  "medium",
+                      "command":  "can you get my open orders for eth?",
+                      "intent_accuracy":  100,
+                      "latency_ms":  3000,
+                      "error_handling_pass":  true,
+                      "output_correctness":  10,
+                      "notes":  "Correct intent/symbol mapping; no orders payload due missing creds."
+                  },
+                  {
+                      "case_id":  10,
+                      "difficulty":  "medium",
+                      "command":  "buy eth at 3000 with 0.05",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1500,
+                      "error_handling_pass":  true,
+                      "output_correctness":  100,
+                      "notes":  "Correct dry-run short-form buy mapped to JSON order."
+                  },
+                  {
+                      "case_id":  11,
+                      "difficulty":  "medium",
+                      "command":  "i want to place a buy limit for ada at 0.75",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1700,
+                      "error_handling_pass":  true,
+                      "output_correctness":  90,
+                      "notes":  "Correct buy mapping; default qty applied (0.001)."
+                  },
+                  {
+                      "case_id":  12,
+                      "difficulty":  "medium",
+                      "command":  "check if i have any open orders",
+                      "intent_accuracy":  100,
+                      "latency_ms":  2800,
+                      "error_handling_pass":  true,
+                      "output_correctness":  10,
+                      "notes":  "Correct intent; no authenticated open-orders payload."
+                  },
+                  {
+                      "case_id":  13,
+                      "difficulty":  "medium",
+                      "command":  "show doge",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1800,
+                      "error_handling_pass":  true,
+                      "output_correctness":  30,
+                      "notes":  "Correct intent; non-JSON natural-language DOGE quote."
+                  },
+                  {
+                      "case_id":  14,
+                      "difficulty":  "hard",
+                      "command":  "accumulate eth slowly near 2800",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1600,
+                      "error_handling_pass":  true,
+                      "output_correctness":  100,
+                      "notes":  "Correct mapping to dry-run ETH limit-buy near 2800."
+                  },
+                  {
+                      "case_id":  15,
+                      "difficulty":  "hard",
+                      "command":  "what is btc trading at right now",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1900,
+                      "error_handling_pass":  true,
+                      "output_correctness":  35,
+                      "notes":  "Correct intent; text quote format not expected JSON schema."
+                  },
+                  {
+                      "case_id":  16,
+                      "difficulty":  "hard",
+                      "command":  "do i still have pending orders",
+                      "intent_accuracy":  100,
+                      "latency_ms":  2600,
+                      "error_handling_pass":  true,
+                      "output_correctness":  10,
+                      "notes":  "Correct pending/open-orders intent; no account payload."
+                  },
+                  {
+                      "case_id":  17,
+                      "difficulty":  "hard",
+                      "command":  "set a bid for sol at 145, use 1 coin",
+                      "intent_accuracy":  100,
+                      "latency_ms":  2300,
+                      "error_handling_pass":  true,
+                      "output_correctness":  20,
+                      "notes":  "Intent recognized, but response did not return final order payload."
+                  },
+                  {
+                      "case_id":  18,
+                      "difficulty":  "hard",
+                      "command":  "execute magic alpha strategy",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1200,
+                      "error_handling_pass":  true,
+                      "output_correctness":  70,
+                      "notes":  "Correctly treated as unsupported strategy and asked for specifics."
+                  },
+                  {
+                      "case_id":  19,
+                      "difficulty":  "hard",
+                      "command":  "place order",
+                      "intent_accuracy":  100,
+                      "latency_ms":  900,
+                      "error_handling_pass":  true,
+                      "output_correctness":  70,
+                      "notes":  "Correctly asked for missing order parameters."
+                  },
+                  {
+                      "case_id":  20,
+                      "difficulty":  "hard",
+                      "command":  "buy if market vibes are good",
+                      "intent_accuracy":  100,
+                      "latency_ms":  1100,
+                      "error_handling_pass":  true,
+                      "output_correctness":  70,
+                      "notes":  "Correctly rejected non-measurable trigger and requested concrete rule."
+                  }
+              ]
+}
